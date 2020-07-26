@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "eaj.tads.projeto3.DemoApplication",
+            "projectName": "projeto3"
+        },
+        {
+            "type": "java",
+            "console": "integratedTerminal",
+            "request": "launch",
+            "name": "Projeto 3",
+            "mainClass": "eaj.tads.projeto3.DemoApplication",
+            "projectName": "Projeto 3"
+        }
+    ]
+}
