@@ -8,4 +8,6 @@ import eaj.tads.projeto3.model.Credenciais;
 
 public interface CredenciaisRepository extends JpaRepository<Credenciais, Long> {
     List<Credenciais> findAllByid(Long id);
+
+    List<Credenciais> findByLoginAndSenha(String login, String Senha);
 }
