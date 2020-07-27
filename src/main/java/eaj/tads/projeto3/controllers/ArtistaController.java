@@ -3,6 +3,7 @@ package eaj.tads.projeto3.controllers;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import eaj.tads.projeto3.services.ArtistaService;
 
 @RestController
 @RequestMapping("/artista")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ArtistaController {
     private ArtistaService service;
 

@@ -1,6 +1,7 @@
 package eaj.tads.projeto3.controllers;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import eaj.tads.projeto3.services.UsuarioService;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin(origins = "http://localhost:3000")
 public class IndexController {
     private CredenciaisService credenciaisService;
     private UsuarioService usuarioService;

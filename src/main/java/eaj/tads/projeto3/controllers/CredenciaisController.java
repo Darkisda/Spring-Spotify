@@ -3,6 +3,7 @@ package eaj.tads.projeto3.controllers;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import eaj.tads.projeto3.services.CredenciaisService;
 
 @RestController
 @RequestMapping("/credenciais")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CredenciaisController {
     private CredenciaisService service;
 
