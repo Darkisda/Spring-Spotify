@@ -46,4 +46,8 @@ public class CredenciaisService {
     public Credenciais saveAndFlush(Credenciais credenciais) {
         return repository.saveAndFlush(credenciais);
     }
+
+    public Optional<Credenciais> login(String login, String senha) {
+        return repository.findByLoginAndSenha(login, senha);
+    }
 }

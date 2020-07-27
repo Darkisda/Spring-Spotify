@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import eaj.tads.projeto3.model.Credenciais;
 import eaj.tads.projeto3.model.Usuario;
 import eaj.tads.projeto3.services.CredenciaisService;
 import eaj.tads.projeto3.services.UsuarioService;
@@ -32,4 +33,12 @@ public class IndexController {
         usuarioService.insert(usuario);
         return ResponseEntity.status(201).build();
     }
+
+    @PostMapping(path = { "/entrar" })
+    public ResponseEntity<Usuario> entrar(@RequestBody Credenciais credenciais) {
+        return credenciaisService.login(credenciais.getLogin(), credenciais.getSenha()).map(record -> {
+            return ResponseEntity.ok().body(record.getUsuario());
+        }).orElse(ResponseEntity.notFound().build());
+    }
+
 }
