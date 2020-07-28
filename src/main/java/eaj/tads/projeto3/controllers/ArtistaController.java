@@ -31,7 +31,7 @@ public class ArtistaController {
         return service.getAll();
     }
 
-    @GetMapping(path = { "/{id" })
+    @GetMapping(path = { "/{id}" })
     public ResponseEntity<Artista> findById(@PathVariable Long id) {
         return service.findById(id).map(record -> ResponseEntity.ok().body(record))
                 .orElse(ResponseEntity.notFound().build());
